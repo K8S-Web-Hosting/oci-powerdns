@@ -3,7 +3,8 @@ name: Create and publish a OCI image
 on:
   push:
     branches: ['main']
-
+  schedule:
+    - cron:  '0 1 * * 0,3'
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
